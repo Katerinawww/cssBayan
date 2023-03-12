@@ -9,10 +9,11 @@ body{
 }
 
 h1{
-    margin: 30px;
+    margin: 30px 0;
+    font-size: 40px;
 }
 
-.accordion_wrapper{
+.wrapper{
     margin: 0 auto;
     width: 80%;
 }
@@ -22,33 +23,54 @@ input {
 }
 
 li{
+    
     list-style: none;
     width: 100%;
-    background: red;
-    padding: 20px;
-    border: 1px solid black;
+    border-top: 1px solid green;
 }
 
 label {
-    display: block;
-    font-size: 22px;
+    display: flex;
+    color: darkblue;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 600;
     padding: 5px;
     cursor: pointer;
 }
+
+label span {
+    opacity: 0;
+    transition: .3s;
+}
+
 .content_pic {
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     height: 0;
-    transition: .1s;
+    opacity: 0;
+    transition: .8s;
 }
 
 .content_pic>img {
-    width: 40%;
+    width: 30%;
     height: 30%;
+    opacity: 1;
 }
 
 input:checked~.content_pic, 
 input:hover~.content_pic {
-    transition: .3s;
+    opacity: 1;
     height: 100%;
 }
 
+input:checked~label,
+input:hover~label {
+color: black;
+}
+
+input:checked~label>span{
+    rotate: 90deg;
+    opacity: 1;
+}
