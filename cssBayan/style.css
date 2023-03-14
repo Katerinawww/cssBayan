@@ -33,7 +33,7 @@ li{
 
 label {
     display: flex;
-    color: darkblue;
+    color: #000000;
     justify-content: space-between;
     cursor: pointer;
 }
@@ -80,6 +80,9 @@ input:checked~.content_text {
 input:checked~.content_text>span{
     rotate: 135deg;
 }
+
+
+
 
 
 
